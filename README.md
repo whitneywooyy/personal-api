@@ -11,6 +11,7 @@ You're going to build a personal API for your own data. Although the idea might 
 ###Step 1: Build your base API
 * Using Express, set up a server that listens on a port of your choice.
 * Consider setting up some CORS middleware to avoid browser security issues
+// DONE
 
 ###Step 2: Build static, read-only endpoints
 * These endpoints will return static data (see below)
