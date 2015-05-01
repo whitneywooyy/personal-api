@@ -10,7 +10,8 @@ You're going to build a personal API for your own data. Although the idea might 
 
 ###Step 1: Build your base API
 * Using Express, set up a server that listens on a port of your choice.
-* Consider setting up some CORS middleware to avoid browser security issues
+* Consider setting up some CORS middleware to avoid browser security issues 
+// npm install --save body-parser
 // DONE
 
 ###Step 2: Build static, read-only endpoints
@@ -29,10 +30,12 @@ returns: Your hobbies (e.g. Fishing, Swimming, etc.) as an array in a JSON objec
 returns: Your past occupations as an array in a JSON object
 ####`GET /occupations/latest`
 returns: The last/current job you have/had. The occupations will be stored in an array, but this method returns the last item of the array in a JSON reponse
+// DONE
 
 ###Step 3: Add ordering to your API
 For the hobbies and occupations endpoints, let's have a way for the client to get a specific ordering, alphabetized or reverse alphabetized.
 * Make it so when the client requests occupations or hobbies with a order query parameter, return an alphabetized list for order=desc and a reverse alphabetized list for order=asc (if your hobbies/occupations endpoints are arrays of strings, you can simply use the Javascript `.sort()` and `.reverse()` methods of an array to do your sorting)
+// DONE
 
 ###Step 4: Make readable/writable endpoints
 Now you're going to make some endpoints that can be added to as POST requests are sent to the server as well as read by GET requests.
