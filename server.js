@@ -26,6 +26,24 @@ var referenceNames = [
 	name: "Roger Rogerly"
 	}	
 ];
+var skillSet = [
+	{
+		id: 1,
+		skill: 'javascript',
+		level: 'intermediate'
+	},
+	{
+		id: 2,
+		skill: 'climbing',
+		level: 'beginner'
+	},
+	{
+		id: 3,
+		skill: 'photography',
+		level: 'advanced'
+	}
+
+];
 
 app.use(bodyParser.json());	// Add in .json to convert everything to JSON
 
@@ -92,6 +110,31 @@ app.get('/references', function(req, res){
 app.post('/references', function(req, res){
 	referenceNames.push(req.body);
 	res.send(JSON.stringify({ "references": referenceNames }));
+})
+
+app.get('/skills', function(req, res){
+	for (var i = 0; i < skillSet.length; i++){ 
+		if (skillSet[i].level === "intermediate" && req.query.experience === "intermediate") {
+			res.send(JSON.stringify({ 
+				"skills": skillSet[i] 
+			}));
+		} else if (skillSet[i].level === "beginner" && req.query.experience === "beginner") {
+			res.send(JSON.stringify({ 
+				"skills": skillSet[i] 
+			}));
+		} else if (skillSet[i].level === "advanced" && req.query.experience === "advanced") {
+			res.send(JSON.stringify({ 
+				"skills": skillSet[i] 
+			}));
+		}
+	}
+	res.send(JSON.stringify({ 
+		"skills": skillSet
+	}));
+})
+app.post('/skills', function(req, res){
+	skillSet.push(req.body);
+	res.send(JSON.stringify({ "skills": skillSet }));
 })
 
 

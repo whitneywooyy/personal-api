@@ -60,6 +60,7 @@ This endpoint is going to be a bit more complicated than those you've made previ
   experience: 'Intermediate'
 }
 ```
+// DONE
 
 * In your server code, make an array that holds all of your skills. Be sure to define the array outside of the app.get or app.post methods, as it needs to persist (scope) outside of those methods and maintain its data. The array will hold 'skill' objects like the example above.
 * Create the endpoint
@@ -70,9 +71,11 @@ purpose: retrieve the list of skills
 Also, allow a 'experience' query parameter so that someone can retrieve a list of skills that match a certain level of experience, like so:
 
 `GET /skills?experience=Intermediate`
+// DONE
 
 ####`POST /skills`
 purpose: add a skill to the collection of skills
+// DONE
 
 ###Step 6: Create a simple Angular app for your API
 * In a separate directory, create an Angular Application
